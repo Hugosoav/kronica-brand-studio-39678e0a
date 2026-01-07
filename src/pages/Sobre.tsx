@@ -47,18 +47,18 @@ const Sobre = () => {
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed">
-                A Kronica é um estúdio de branding e design estratégico. A equipe trabalha com marcas em diferentes momentos: criação do zero, evolução ou reposicionamento completo.
+                A Kronica é um brand studio independente que acredita que marcas vão além da estética. Elas são narrativas vivas, construídas no tempo, no detalhe e na coerência.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                O foco está em tornar a comunicação visual coerente com o objetivo de cada negócio. Não se trata apenas de "deixar bonito", mas de criar sistemas que funcionam — no digital e no físico, no dia a dia e nas grandes apresentações.
+                Inspirados no conceito de crônica, criamos marcas como quem escreve histórias: com propósito, personalidade e intenção. Nada é genérico e nada é por acaso. Cada projeto é único, pensado para refletir a essência de quem está por trás da marca e sustentar um posicionamento claro e consistente.
               </p>
             </div>
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Cada projeto parte de um processo claro: diagnóstico, direção, construção e implementação. Assim, as entregas têm intenção e racional — não são apenas questão de gosto.
+                Trabalhamos de forma próxima, estratégica e autoral, unindo design e branding para construir marcas que fazem sentido, se diferenciam e permanecem.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                A Kronica valoriza relações transparentes, comunicação objetiva e entregas que realmente fazem diferença para quem as recebe.
+                A Kronica existe para marcas que entendem que branding é construção contínua, que boas histórias não se contam em um único capítulo, mas se sustentam ao longo do tempo.
               </p>
             </div>
           </div>
