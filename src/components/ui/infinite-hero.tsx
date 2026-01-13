@@ -287,11 +287,11 @@ export default function InfiniteHero({
   return (
     <div
       ref={rootRef}
-      className="relative flex min-h-[85vh] sm:min-h-screen w-full items-center justify-center overflow-hidden bg-background"
+      className="relative flex h-[100svh] sm:min-h-screen w-full items-center justify-center overflow-hidden bg-background pt-14 sm:pt-0"
     >
       <div
         ref={bgRef}
-        className="pointer-events-none absolute inset-0 h-full w-full"
+        className="pointer-events-none absolute inset-0 h-full w-full scale-[1.2] sm:scale-100"
       >
         <ShaderBackground />
       </div>
@@ -299,7 +299,7 @@ export default function InfiniteHero({
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center">
-        <div className="flex flex-col items-center gap-4 sm:gap-6">
+        <div className="flex flex-col items-center gap-3 sm:gap-6">
           <h1
             ref={h1Ref}
             className="text-3xl font-light tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-7xl"
@@ -309,12 +309,12 @@ export default function InfiniteHero({
 
           <p
             ref={pRef}
-            className="max-w-2xl text-base text-muted-foreground sm:text-lg md:text-xl px-2"
+            className="max-w-2xl text-sm text-muted-foreground sm:text-lg md:text-xl px-2"
           >
             {subtitle}
           </p>
 
-          <div ref={ctaRef} className="mt-2 sm:mt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <div ref={ctaRef} className="mt-1 sm:mt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Button asChild size="default" className="sm:h-11 sm:px-8">
               <Link to={primaryButtonLink}>
                 {primaryButtonText}
