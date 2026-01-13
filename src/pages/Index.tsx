@@ -24,6 +24,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <InfiniteHero 
+        title="Marcas que contam histórias"
         subtitle="Kronica Studio"
         primaryButtonText="Conhecer"
         primaryButtonLink="/sobre"

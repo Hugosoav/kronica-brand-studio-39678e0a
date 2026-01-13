@@ -3,11 +3,10 @@
 import { useGSAP } from "@gsap/react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { gsap } from "gsap";
-import { useMemo, useRef, useState, useEffect } from "react";
+import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { AnimatePresence, motion } from "framer-motion";
 
 interface ShaderPlaneProps {
   vertexShader: string;
@@ -215,18 +214,8 @@ function ShaderBackground({
   );
 }
 
-const rotatingWords = [
-  "Tecnologia",
-  "Serviços profissionais",
-  "Publicidade",
-  "Indústrias",
-  "Studios",
-  "Agências",
-  "Escritórios",
-  "Cívico e Público",
-];
-
 interface InfiniteHeroProps {
+  title?: string;
   subtitle?: string;
   primaryButtonText?: string;
   primaryButtonLink?: string;
@@ -235,7 +224,8 @@ interface InfiniteHeroProps {
 }
 
 export default function InfiniteHero({
-  subtitle = "Kronica Studio",
+  title = "Marcas que contam histórias",
+  subtitle = "Boas histórias não se contam em um único capítulo, mas se sustentam ao longo do tempo.",
   primaryButtonText = "Conhecer",
   primaryButtonLink = "/sobre",
   secondaryButtonText = "Ver projetos",
@@ -246,14 +236,6 @@ export default function InfiniteHero({
   const h1Ref = useRef<HTMLHeadingElement>(null);
   const pRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const [wordIndex, setWordIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setWordIndex((prev) => (prev + 1) % rotatingWords.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
 
   useGSAP(
     () => {
@@ -322,21 +304,7 @@ export default function InfiniteHero({
             ref={h1Ref}
             className="text-3xl font-light tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-7xl"
           >
-            Design para{" "}
-            <span className="inline-block relative min-w-[200px] sm:min-w-[280px] md:min-w-[340px] lg:min-w-[420px] text-left">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={wordIndex}
-                  initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, y: -20, filter: "blur(8px)" }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="inline-block"
-                >
-                  {rotatingWords[wordIndex]}
-                </motion.span>
-              </AnimatePresence>
-            </span>
+            {title}
           </h1>
 
           <p
