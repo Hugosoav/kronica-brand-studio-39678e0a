@@ -226,7 +226,6 @@ const serviceOptions = [
 
 const industryOptions = [
   { label: "Todos", value: "" },
-  { label: "Gastronomia", value: "Café" },
   { label: "Arte & Cultura", value: "Arte" },
   { label: "Moda", value: "Moda" },
   { label: "Arquitetura", value: "Arquitetura" },
