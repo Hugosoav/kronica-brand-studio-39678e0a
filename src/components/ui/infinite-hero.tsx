@@ -311,7 +311,7 @@ function Dropdown({ options, value, onChange, isOpen, onToggle, onClose }: Dropd
 }
 
 export default function InfiniteHero({
-  title = "Design com narrativa",
+  title = "Marcas que contam histórias",
   subtitle = "Kronica Studio",
 }: InfiniteHeroProps) {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -382,8 +382,6 @@ export default function InfiniteHero({
     { scope: rootRef },
   );
 
-  const isAnyDropdownOpen = serviceOpen || industryOpen;
-
   return (
     <div
       ref={rootRef}
@@ -391,14 +389,14 @@ export default function InfiniteHero({
     >
       <div
         ref={bgRef}
-        className={`pointer-events-none absolute inset-0 h-full w-full transition-all duration-300 ${isAnyDropdownOpen ? 'blur-md' : ''}`}
+        className="pointer-events-none absolute inset-0 h-full w-full"
       >
         <ShaderBackground />
       </div>
 
-      <div className={`pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background transition-all duration-300 ${isAnyDropdownOpen ? 'blur-md' : ''}`} />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
 
-      <div className={`relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center transition-all duration-300 ${isAnyDropdownOpen ? 'blur-sm' : ''}`}>
+      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center">
         <div className="flex flex-col items-center gap-4 sm:gap-6">
           <h1
             ref={h1Ref}
