@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Compass, Palette, RefreshCw, Instagram, Layers, Clock, FileText, Send } from "lucide-react";
+import { ArrowRight, Compass, Palette, RefreshCw, Instagram, Layers, Clock, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 
@@ -54,21 +54,6 @@ const Servicos = () => {
       deliverables: "Protótipo navegável + assets essenciais",
       timeline: "2 a 6 semanas",
       cta: "Quero desenhar meu produto",
-    },
-  ];
-
-  const formats = [
-    {
-      title: "Essencial",
-      desc: "Direção estratégica + base visual para marcas que estão começando.",
-    },
-    {
-      title: "Completo",
-      desc: "Branding + identidade visual + aplicações. O pacote mais procurado.",
-    },
-    {
-      title: "Contínuo",
-      desc: "Gestão visual por 6 meses para marcas que precisam de consistência.",
     },
   ];
 
@@ -149,84 +134,6 @@ const Servicos = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Editorial Line */}
-      <div className="container mx-auto px-4">
-        <div className="editorial-line" />
-      </div>
-
-      {/* Como Contratar */}
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="mb-10">
-            <span className="text-sm text-muted-foreground uppercase tracking-wider">Processo</span>
-            <h2 className="text-2xl md:text-3xl font-semibold mt-2">Como contratar</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-            {[
-              { step: "01", title: "Envio de briefing", desc: "Você compartilha informações sobre a marca, objetivos e momento atual." },
-              { step: "02", title: "Diagnóstico + proposta", desc: "A equipe analisa e envia uma proposta objetiva com escopo, prazo e valores." },
-              { step: "03", title: "Cronograma + início", desc: "Com tudo alinhado, o projeto começa com datas e entregas definidas." },
-            ].map((item, index) => (
-              <div key={index} className="p-6 border border-border/30">
-                <div className="text-3xl font-light text-border/50 mb-3">{item.step}</div>
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Editorial Line */}
-      <div className="container mx-auto px-4">
-        <div className="editorial-line" />
-      </div>
-
-      {/* Formatos */}
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="mb-10">
-            <span className="text-sm text-muted-foreground uppercase tracking-wider">Formatos</span>
-            <h2 className="text-2xl md:text-3xl font-semibold mt-2">Opções de contratação</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
-            {formats.map((format, index) => (
-              <div key={index} className="p-6 bg-secondary text-secondary-foreground">
-                <h3 className="text-lg font-semibold mb-2">{format.title}</h3>
-                <p className="text-secondary-foreground/70 text-sm">{format.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-sm text-muted-foreground text-center">
-            Valores sob consulta. A equipe recomenda o formato ideal após o briefing.
-          </p>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="py-16 md:py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <Send className="mx-auto mb-4" size={28} strokeWidth={1.5} />
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-              Receber uma proposta objetiva
-            </h2>
-            <p className="text-secondary-foreground/70 mb-6 text-sm">
-              Sem compromisso. A equipe analisa e responde com direcionamento, prazo e valores.
-            </p>
-            <Button asChild size="lg" variant="secondary" className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90">
-              <Link to="/contato">
-                Solicitar proposta
-                <ArrowRight className="ml-2" size={18} />
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
