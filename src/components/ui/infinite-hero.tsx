@@ -421,13 +421,14 @@ export default function InfiniteHero({
         <div className="flex flex-col items-center gap-4 sm:gap-6">
           <h1
             ref={h1Ref}
-            className="text-3xl font-light tracking-tight sm:text-4xl md:text-5xl lg:text-7xl"
+            className="text-3xl font-light tracking-tight sm:text-4xl md:text-5xl lg:text-7xl py-2"
             style={{
               background: "linear-gradient(90deg, hsl(var(--foreground)) 0%, hsl(var(--foreground)) 40%, hsl(var(--muted-foreground)) 50%, hsl(var(--foreground)) 60%, hsl(var(--foreground)) 100%)",
               backgroundSize: "200% auto",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               WebkitTextFillColor: "transparent",
+              lineHeight: 1.2,
             }}
           >
             {title}
