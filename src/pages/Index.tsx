@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import InfiniteHero from "@/components/ui/infinite-hero";
+import ProjectShowcase from "@/components/ProjectShowcase";
 
 const Index = () => {
   return (
@@ -13,6 +14,9 @@ const Index = () => {
         title="Design com narrativa"
         subtitle="Kronica Studio"
       />
+
+      {/* Projects Showcase */}
+      <ProjectShowcase />
     </Layout>
   );
 };
