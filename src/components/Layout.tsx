@@ -8,17 +8,31 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col relative">
-      {/* Global minimalist background */}
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
+      {/* Global modern minimalist background */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-background" />
+        
+        {/* Soft ambient glow - top right */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute -top-1/4 -right-1/4 w-[60%] h-[60%] rounded-full opacity-[0.04]"
           style={{
-            backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
+            background: 'radial-gradient(circle, hsl(var(--foreground)) 0%, transparent 70%)',
+            filter: 'blur(80px)',
           }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_70%)]" />
+        
+        {/* Soft ambient glow - bottom left */}
+        <div 
+          className="absolute -bottom-1/4 -left-1/4 w-[50%] h-[50%] rounded-full opacity-[0.03]"
+          style={{
+            background: 'radial-gradient(circle, hsl(var(--foreground)) 0%, transparent 70%)',
+            filter: 'blur(100px)',
+          }}
+        />
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50" />
       </div>
       
       <Header />
