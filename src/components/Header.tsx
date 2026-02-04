@@ -1,12 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/hooks/use-theme";
 import logoBranco from "@/assets/logo-branco.png";
+import logoPreto from "@/assets/logo-preto.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -24,7 +27,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src={logoBranco} 
+              src={theme === "dark" ? logoBranco : logoPreto} 
               alt="Kronica" 
               className="h-5 md:h-6" 
             />
@@ -45,8 +48,16 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Search */}
-          <div className="hidden md:flex items-center gap-2">
+          {/* Search & Theme Toggle */}
+          <div className="hidden md:flex items-center gap-1">
+            <Button 
+              size="sm" 
+              variant="ghost" 
+              onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </Button>
             <Button asChild size="sm" variant="ghost">
               <Link to="/projetos" aria-label="Buscar projetos">
                 <Search size={20} />
@@ -55,7 +66,15 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-1">
+            <Button 
+              size="sm" 
+              variant="ghost" 
+              onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </Button>
             <button
               className="p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
