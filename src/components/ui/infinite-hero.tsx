@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronDown, X } from "lucide-react";
+import VideoHeroBackground from "./video-hero-background";
 
 const serviceOptions = [
   { label: "Tudo", value: "" },
@@ -58,7 +59,7 @@ function Dropdown({ options, value, onChange, isOpen, onToggle, onClose }: Dropd
     <div className="relative">
       <button
         onClick={onToggle}
-        className="inline-flex items-center gap-1 font-medium text-foreground hover:opacity-70 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+        className="inline-flex items-center gap-1 font-medium text-white hover:opacity-70 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
       >
         {selectedLabel}
         <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
@@ -197,6 +198,8 @@ export default function InfiniteHero({
       ref={rootRef}
       className="relative flex h-screen w-full items-center justify-center overflow-hidden"
     >
+      {/* Video background */}
+      <VideoHeroBackground />
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center">
         <div className="flex flex-col items-center gap-4 sm:gap-6">
@@ -204,7 +207,7 @@ export default function InfiniteHero({
             ref={h1Ref}
             className="text-3xl font-light tracking-tight sm:text-4xl md:text-5xl lg:text-7xl py-2"
             style={{
-              background: "linear-gradient(90deg, hsl(var(--foreground)) 0%, hsl(var(--foreground)) 40%, hsl(var(--muted-foreground)) 50%, hsl(var(--foreground)) 60%, hsl(var(--foreground)) 100%)",
+              background: "linear-gradient(90deg, #ffffff 0%, #ffffff 40%, #999999 50%, #ffffff 60%, #ffffff 100%)",
               backgroundSize: "200% auto",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
@@ -217,7 +220,7 @@ export default function InfiniteHero({
 
           <p
             ref={pRef}
-            className="max-w-2xl text-base text-muted-foreground sm:text-lg md:text-xl px-2"
+            className="max-w-2xl text-base text-white/70 sm:text-lg md:text-xl px-2"
           >
             {subtitle}
           </p>
@@ -226,9 +229,9 @@ export default function InfiniteHero({
             {/* Search Bar with Dropdowns */}
             <div 
               onClick={handleNavigate}
-              className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 bg-muted/80 backdrop-blur-sm rounded-full cursor-pointer hover:bg-muted transition-colors flex-wrap justify-center"
+              className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 bg-white/10 backdrop-blur-md rounded-full cursor-pointer hover:bg-white/20 transition-colors flex-wrap justify-center border border-white/10"
             >
-              <span className="text-muted-foreground text-sm sm:text-base">Criamos</span>
+              <span className="text-white/60 text-sm sm:text-base">Criamos</span>
               <div onClick={(e) => e.stopPropagation()}>
                 <Dropdown
                   options={serviceOptions}
@@ -242,7 +245,7 @@ export default function InfiniteHero({
                   onClose={() => setServiceOpen(false)}
                 />
               </div>
-              <span className="text-muted-foreground text-sm sm:text-base">para</span>
+              <span className="text-white/60 text-sm sm:text-base">para</span>
               <div onClick={(e) => e.stopPropagation()}>
                 <Dropdown
                   options={industryOptions}
