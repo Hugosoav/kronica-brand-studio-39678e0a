@@ -4,8 +4,8 @@ const Sobre = () => {
   return (
     <Layout>
       {/* SEO */}
-      <title>Sobre a Kronica — Marcas com Enredo</title>
-      <meta name="description" content="A Kronica é um estúdio de design que constrói marcas a partir de narrativa, estratégia e consistência. Cada projeto é desenvolvido em capítulos." />
+      <title>Sobre a Kronica</title>
+      <meta name="description" content="A Kronica é um estúdio de design que desenvolve soluções visuais do físico ao digital, com clareza estratégica e alto nível de refinamento." />
 
       {/* About Section */}
       <section className="py-20 md:py-32 lg:py-40">
@@ -16,35 +16,24 @@ const Sobre = () => {
             </span>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] mb-8 animate-fade-in-up">
-              Marcas com enredo.
+              Sobre a Kronica
             </h1>
             
             <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed animate-fade-in-up delay-100">
               <p>
-                A Kronica é um estúdio de design contemporâneo que constrói marcas e sistemas visuais a partir de narrativa, estratégia e consistência. Cada projeto é desenvolvido como um livro, com início, desenvolvimento e continuidade.
+                A Kronica é um estúdio de design que desenvolve soluções visuais do físico ao digital. Nosso design não foca somente na estética, mas da capacidade de comunicar com clareza, construindo percepção e traduzindo ideias em sistemas visuais bem estruturados.
               </p>
               
               <p>
-                Antes de criar, a equipe escuta. Entende o cenário, mapeia o contexto e identifica o ponto de partida. É assim que se define o que a marca precisa ser e o que ela nunca deve parecer. Com a direção definida, começa a construção: estratégia vira sistema, conceito vira identidade. Cada elemento é pensado para conversar com o todo, seja nome, símbolo, tipografia, cor ou tom de voz.
+                Nosso trabalho abrange projetos de identidade visual, branding e posicionamento, direção criativa, impressos, apresentações institucionais, sistemas para redes sociais e experiências digitais. Atuamos tanto na construção completa de marcas quanto no desenvolvimento de materiais e desdobramentos que fortalecem a comunicação e elevam o padrão visual de um negócio.
               </p>
               
               <p>
-                A Kronica não se limita à criação de marcas. É um estúdio multidisciplinar que trabalha com branding, sistemas de design, interfaces digitais, campanhas e produção visual. Tudo sempre mantendo o mesmo fio narrativo e a mesma base estratégica.
+                Operando como um modelo independente e próximo. Cada projeto desenvolvido é conduzido de forma direta pela equipe responsável, garantindo envolvimento real do diagnóstico e conceito à criação e aplicação final. Nosso método permite decisões mais consistentes, processos mais bem direcionados e entregas com alto nível de refinamento.
               </p>
               
               <p>
-                O visual é consequência. A base do trabalho está em clareza estratégica, posicionamento e narrativa. Uma marca não termina na entrega, então a Kronica desenvolve sistemas replicáveis, feitos para crescer e manter consistência ao longo do tempo.
-              </p>
-              
-              <p>
-                A Kronica também atua como parceira de agências, sendo o braço de design, branding e direção de arte para projetos que exigem profundidade visual e consistência. A dinâmica é simples: a agência mantém o relacionamento com o cliente, e a Kronica entra como extensão criativa, com entregas consistentes, prazos respeitados e comunicação direta.
-              </p>
-            </div>
-
-
-            <div className="mt-16 pt-8 border-t border-border/30">
-              <p className="text-sm text-muted-foreground italic">
-                "Moral da história: marca boa não é a mais bonita, é a que faz sentido."
+                Com uma abordagem estética contemporânea e olhar estratégico, criamos design com intenção, dando forma, significado e presença para marcas e projetos que precisam ser levados a sério.
               </p>
             </div>
           </div>
