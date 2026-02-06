@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 
 const Sobre = () => {
@@ -44,14 +41,6 @@ const Sobre = () => {
               </p>
             </div>
 
-            <div className="mt-12 animate-fade-in-up delay-200">
-              <Button asChild size="lg">
-                <Link to="/servicos">
-                  Conhecer os serviços
-                  <ArrowRight className="ml-2" size={18} />
-                </Link>
-              </Button>
-            </div>
 
             <div className="mt-16 pt-8 border-t border-border/30">
               <p className="text-sm text-muted-foreground italic">

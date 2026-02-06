@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/hooks/use-theme";
 import Index from "./pages/Index";
 import Sobre from "./pages/Sobre";
-import Servicos from "./pages/Servicos";
+
 import Contato from "./pages/Contato";
 import Projetos from "./pages/Projetos";
 import ProjetoDetalhe from "./pages/ProjetoDetalhe";
@@ -24,7 +24,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/sobre" element={<Sobre />} />
-            <Route path="/servicos" element={<Servicos />} />
+            
             <Route path="/projetos" element={<Projetos />} />
             <Route path="/projetos/:id" element={<ProjetoDetalhe />} />
             <Route path="/contato" element={<Contato />} />

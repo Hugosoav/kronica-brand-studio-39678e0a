@@ -41,11 +41,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="text-sm hover:text-foreground transition-colors">
-                  Serviços
-                </Link>
-              </li>
-              <li>
                 <Link to="/contato" className="text-sm hover:text-foreground transition-colors">
                   Contato
                 </Link>
@@ -53,34 +48,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-sm font-semibold mb-3 text-secondary-foreground/50 uppercase tracking-wider">
-              Serviços
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/servicos" className="text-sm hover:text-foreground transition-colors">
-                  Branding Estratégico
-                </Link>
-              </li>
-              <li>
-                <Link to="/servicos" className="text-sm hover:text-foreground transition-colors">
-                  Identidade Visual
-                </Link>
-              </li>
-              <li>
-                <Link to="/servicos" className="text-sm hover:text-foreground transition-colors">
-                  Rebranding
-                </Link>
-              </li>
-              <li>
-                <Link to="/servicos" className="text-sm hover:text-foreground transition-colors">
-                  Websites
-                </Link>
-              </li>
-            </ul>
-          </div>
 
           {/* Contact */}
           <div>
