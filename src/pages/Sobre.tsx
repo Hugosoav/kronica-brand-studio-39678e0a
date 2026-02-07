@@ -1,8 +1,6 @@
 import Layout from "@/components/Layout";
-
 const Sobre = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* SEO */}
       <title>Sobre a Kronica</title>
       <meta name="description" content="A Kronica é um estúdio de design que desenvolve soluções visuais do físico ao digital, com clareza estratégica e alto nível de refinamento." />
@@ -15,14 +13,10 @@ const Sobre = () => {
               Sobre o estúdio
             </span>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] mb-8 animate-fade-in-up">
-              Sobre a Kronica
-            </h1>
+            
             
             <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed animate-fade-in-up delay-100">
-              <p>
-                A Kronica é um estúdio de design que desenvolve soluções visuais do físico ao digital. Nosso design não foca somente na estética, mas da capacidade de comunicar com clareza, construindo percepção e traduzindo ideias em sistemas visuais bem estruturados.
-              </p>
+              <p>A Kronica é um estúdio de design que desenvolve soluções visuais do físico ao digital. Nosso design não foca somente na estética, mas na capacidade de comunicar com clareza, construindo percepção e traduzindo ideias em sistemas visuais bem estruturados.</p>
               
               <p>
                 Nosso trabalho abrange projetos de identidade visual, branding e posicionamento, direção criativa, impressos, apresentações institucionais, sistemas para redes sociais e experiências digitais. Atuamos tanto na construção completa de marcas quanto no desenvolvimento de materiais e desdobramentos que fortalecem a comunicação e elevam o padrão visual de um negócio.
@@ -39,8 +33,6 @@ const Sobre = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Sobre;
