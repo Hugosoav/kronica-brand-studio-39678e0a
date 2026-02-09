@@ -7,15 +7,9 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: {
-        DEFAULT: "2.5rem",
-        sm: "4rem",
-        lg: "5rem",
-        xl: "6rem",
-        "2xl": "8rem",
-      },
+      padding: "1.5rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1200px",
       },
     },
     extend: {
