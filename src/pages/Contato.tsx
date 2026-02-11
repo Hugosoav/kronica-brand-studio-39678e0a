@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+
 import { ArrowUpRight } from "lucide-react";
 
 const Contato = () => {
@@ -88,7 +88,7 @@ const Contato = () => {
           </div>
         </section>
 
-        <Footer />
+        
       </main>
     </div>
   );
