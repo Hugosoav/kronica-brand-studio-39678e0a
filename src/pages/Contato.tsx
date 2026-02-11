@@ -25,8 +25,8 @@ const Contato = () => {
                   Entre em contato
                 </span>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] mb-16 text-foreground">Vamos
-criar algo
-extraordinário
+criar algo extraordinário
+
 
                   <br />extraordinário
                 </h1>
