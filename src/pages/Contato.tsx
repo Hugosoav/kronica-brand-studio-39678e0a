@@ -12,8 +12,8 @@ const Contato = () => {
         <title>Contato — Fale com a Kronica</title>
         <meta
           name="description"
-          content="A equipe responde com próximos passos, prazos e direcionamento. Entre em contato com a Kronica."
-        />
+          content="A equipe responde com próximos passos, prazos e direcionamento. Entre em contato com a Kronica." />
+
 
         {/* Contact Section */}
         <section className="flex-1 flex items-center py-24 md:py-32">
@@ -24,15 +24,15 @@ const Contato = () => {
                 <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6 block">
                   Entre em contato
                 </span>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] mb-16 text-foreground">
-                  Vamos criar algo<br />extraordinário
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] mb-16 text-foreground">Vamos
+criar algo
+extraordinário
+
+                  <br />extraordinário
                 </h1>
 
                 <div className="space-y-10">
-                  <a
-                    href="mailto:kronicastudio@gmail.com"
-                    className="group block"
-                  >
+                  <a href="mailto:kronicastudio@gmail.com" className="group block">
                     <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2 block">
                       Email
                     </span>
@@ -46,8 +46,8 @@ const Contato = () => {
                     href="https://wa.me/5528999161275"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block"
-                  >
+                    className="group block">
+
                     <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2 block">
                       WhatsApp
                     </span>
@@ -69,8 +69,8 @@ const Contato = () => {
                     href="https://instagram.com/kronicastudio"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 text-lg md:text-xl text-foreground hover:opacity-70 transition-opacity"
-                  >
+                    className="group inline-flex items-center gap-2 text-lg md:text-xl text-foreground hover:opacity-70 transition-opacity">
+
                     Instagram
                     <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
@@ -90,8 +90,8 @@ const Contato = () => {
 
         
       </main>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Contato;
