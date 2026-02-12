@@ -19,7 +19,8 @@ const Sobre = () => {
               <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6 block">
                 Sobre o estúdio
               </span>
-              <h1 className="text-4xl lg:text-6xl font-light leading-tight mb-10 md:text-4xl">​
+              <h1 className="text-4xl lg:text-6xl font-light leading-tight mb-10 md:text-4xl">Filosofia de Design
+​
                 <br />Design
               </h1>
 
@@ -85,7 +86,6 @@ const Sobre = () => {
         </div>
       </section>
     </Layout>);
-
 };
 
 export default Sobre;
