@@ -14,8 +14,7 @@ const serviceOptions = [
 { label: "Branding", value: "Branding" },
 { label: "Rebranding", value: "Rebranding" },
 { label: "Social Media", value: "Social Media" },
-{ label: "Impressos", value: "Impressos" },
-{ label: "Websites", value: "Websites" }];
+{ label: "Impressos", value: "Impressos" }];
 
 
 const industryOptions = [
@@ -26,7 +25,6 @@ const industryOptions = [
 { label: "Educação", value: "Educação" },
 { label: "Entretenimento", value: "Entretenimento" },
 { label: "Moda e Beleza", value: "Moda e Beleza" },
-{ label: "Finanças", value: "Finanças" },
 { label: "Alimentos e Bebidas", value: "Alimentos e Bebidas" },
 { label: "Saúde", value: "Saúde" },
 { label: "Hotelaria e Viagens", value: "Hotelaria e Viagens" },
@@ -34,8 +32,7 @@ const industryOptions = [
 { label: "Serviços Profissionais", value: "Serviços Profissionais" },
 { label: "Publicação e Editoração", value: "Publicação e Editoração" },
 { label: "Mercado Imobiliário", value: "Mercado Imobiliário" },
-{ label: "Tecnologia", value: "Tecnologia" },
-{ label: "Transporte", value: "Transporte" }];
+{ label: "Tecnologia", value: "Tecnologia" }];
 
 
 
