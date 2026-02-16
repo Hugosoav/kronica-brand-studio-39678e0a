@@ -66,7 +66,7 @@ const ProjetoDetalhe = () => {
             <img
               src={project.images.cover}
               alt={project.title}
-              className="w-full aspect-[16/9] object-cover"
+              className="w-full object-contain"
             />
           </div>
         </div>
@@ -118,7 +118,7 @@ const ProjetoDetalhe = () => {
                 <img
                   src={image}
                   alt={`${project.title} - Imagem ${index + 1}`}
-                  className="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full object-contain hover:scale-105 transition-transform duration-700"
                 />
               </div>
             ))}
