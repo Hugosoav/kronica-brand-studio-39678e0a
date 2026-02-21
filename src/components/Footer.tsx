@@ -75,10 +75,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://x.com/kronicastudio"
+
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-base md:text-lg hover:opacity-70 transition-opacity">
+                    className="text-base md:text-lg hover:opacity-70 transition-opacity" href="https://x.com/Studiokronica">
 
                     X
                   </a>
