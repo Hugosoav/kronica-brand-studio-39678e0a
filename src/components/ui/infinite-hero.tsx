@@ -205,7 +205,7 @@ export default function InfiniteHero({
         <div className="flex flex-col items-center gap-4 sm:gap-6">
           <h1
             ref={h1Ref}
-            className="tracking-tight sm:text-5xl md:text-6xl lg:text-8xl py-2 text-6xl font-medium"
+            className="tracking-tight sm:text-5xl md:text-6xl lg:text-8xl py-2 text-6xl font-thin"
             style={{
               backgroundImage: isDark ?
               "linear-gradient(90deg, #ffffff 0%, #ffffff 35%, #888888 50%, #ffffff 65%, #ffffff 100%)" :
