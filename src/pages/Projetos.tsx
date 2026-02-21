@@ -23,10 +23,10 @@ const Projetos = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">
-              Projetos
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 animate-fade-in-up">Histórias construídas
+
             </h1>
-            <p className="text-base text-muted-foreground mb-8 animate-fade-in-up delay-100">Histórias que construímos
+            <p className="text-base text-muted-foreground mb-8 animate-fade-in-up delay-100">
 
             </p>
 
