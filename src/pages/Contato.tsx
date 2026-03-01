@@ -83,16 +83,6 @@ const Contato = () => {
                         <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="https://x.com/kronicastudio"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group inline-flex items-center gap-2 text-lg md:text-xl text-foreground hover:opacity-70 transition-opacity">
-                        X
-                        <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </a>
-                    </li>
                   </ul>
                 </div>
 
