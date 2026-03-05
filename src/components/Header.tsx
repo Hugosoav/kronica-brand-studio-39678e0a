@@ -49,23 +49,20 @@ const Header = () => {
 
   // Close on click outside
   useEffect(() => {
+    if (!searchOpen) return;
     const handleClick = (e: MouseEvent) => {
-      const target = e.target as Node;
-      if (!target || !document.contains(target)) return;
-      if (searchContainerRef.current && !searchContainerRef.current.contains(target)) {
-        setSearchOpen(false);
-      }
+      const target = e.target as HTMLElement;
+      if (!target) return;
+      if (target.closest?.('[data-search-container]')) return;
+      setSearchOpen(false);
     };
-    if (searchOpen) {
-      // Use setTimeout to avoid catching the same click that opened the search
-      const timer = setTimeout(() => {
-        document.addEventListener("mousedown", handleClick);
-      }, 100);
-      return () => {
-        clearTimeout(timer);
-        document.removeEventListener("mousedown", handleClick);
-      };
-    }
+    const timer = setTimeout(() => {
+      document.addEventListener("mousedown", handleClick);
+    }, 300);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mousedown", handleClick);
+    };
   }, [searchOpen]);
 
   // Close menu on route change
@@ -147,7 +144,7 @@ const Header = () => {
           </div>
 
           {/* Search area */}
-          <div className="hidden md:flex items-center" ref={searchContainerRef}>
+          <div className="hidden md:flex items-center" ref={searchContainerRef} data-search-container>
             <AnimatePresence mode="wait">
               {searchOpen ? (
                 <motion.div
@@ -274,6 +271,7 @@ const Header = () => {
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
               ref={searchContainerRef}
+              data-search-container
             >
               <div className="relative">
                 <div className="flex items-center border border-border/40 rounded-full bg-background/60 px-4 py-2">
