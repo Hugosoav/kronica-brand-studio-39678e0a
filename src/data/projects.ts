@@ -79,7 +79,7 @@ export const projects: Project[] = [
     },
     tags: ["Construção", "Engenharia", "Identidade Visual"],
     brandStory: {
-      history: "A Pólis Engenharia nasceu da visão de engenheiros apaixonados por transformar projetos em realidade. Com mais de uma década de experiência no setor de construção civil, a empresa se consolidou como referência em obras residenciais e comerciais. O nome 'Pólis' remete à cidade grega — um símbolo de construção coletiva, planejamento e progresso urbano.",
+      history: "A Pólis Engenharia nasceu da visão de engenheiros apaixonados por transformar projetos em realidade. Com mais de uma década de experiência no setor de construção civil, a empresa se consolidou como referência em obras residenciais e comerciais. O nome 'Pólis' remete à cidade grega, um símbolo de construção coletiva, planejamento e progresso urbano.",
       voiceTone: "A comunicação da Pólis é direta, técnica quando necessário, mas sempre acessível. O tom transmite segurança e competência, usando uma linguagem que equilibra autoridade profissional com proximidade humana. Cada mensagem reforça a ideia de solidez e compromisso.",
       values: ["Solidez", "Inovação", "Compromisso", "Qualidade", "Sustentabilidade"]
     }
