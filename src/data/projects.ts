@@ -39,7 +39,7 @@ import caroline05 from "@/assets/projects/caroline-rossi/caroline-rossi-05.jpg";
 import caroline06 from "@/assets/projects/caroline-rossi/caroline-rossi-06.jpg";
 import caroline07 from "@/assets/projects/caroline-rossi/caroline-rossi-07.jpg";
 import caroline08 from "@/assets/projects/caroline-rossi/caroline-rossi-08.jpg";
-import caroline09 from "@/assets/projects/caroline-rossi/caroline-rossi-09.jpg";
+
 
 export const projects: Project[] = [
   {
