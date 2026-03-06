@@ -54,27 +54,6 @@ export const projects: Project[] = [
       values: ["Confiança", "Sofisticação", "Empatia", "Transparência", "Excelência"]
     }
   },
-  {
-    id: "polis-engenharia",
-    title: "Pólis Engenharia",
-    category: "Identidade Visual",
-    description: "Logo simétrico e forte que representa solidez e estrutura para empresa de construção.",
-    fullDescription: "Desenvolvemos uma identidade visual robusta e marcante para a Pólis Engenharia, uma empresa do setor de construção civil. O projeto resultou em uma marca que transmite confiança, estabilidade e profissionalismo.",
-    concept: "O conceito central foi criar um logo simétrico e forte, representando solidez e estrutura. As formas geométricas precisas refletem a engenharia e a construção, enquanto o elemento triangular adiciona dinamismo e remete ao ícone de uma casa ou telhado. A paleta em tons de azul escuro e laranja transmite profissionalismo e energia.",
-    year: "2024",
-    client: "Pólis Engenharia",
-    services: ["Identidade Visual", "Design de Logo", "Aplicações"],
-    images: {
-      cover: polis08,
-      gallery: [polis01, polis02, polis03, polis04, polis05, polis06, polis07, polis08]
-    },
-    tags: ["Construção", "Engenharia", "Identidade Visual"],
-    brandStory: {
-      history: "A Pólis Engenharia nasceu da visão de engenheiros apaixonados por transformar projetos em realidade. Com mais de uma década de experiência no setor de construção civil, a empresa se consolidou como referência em obras residenciais e comerciais. O nome 'Pólis' remete à cidade grega, um símbolo de construção coletiva, planejamento e progresso urbano.",
-      voiceTone: "A comunicação da Pólis é direta, técnica quando necessário, mas sempre acessível. O tom transmite segurança e competência, usando uma linguagem que equilibra autoridade profissional com proximidade humana. Cada mensagem reforça a ideia de solidez e compromisso.",
-      values: ["Solidez", "Inovação", "Compromisso", "Qualidade", "Sustentabilidade"]
-    }
-  },
 ];
 
 export const getProjectById = (id: string): Project | undefined => {
