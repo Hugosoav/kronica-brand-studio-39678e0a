@@ -42,7 +42,7 @@ const ProjetoDetalhe = () => {
 
         {/* Hero */}
         <section className="pt-24 pb-12">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto">
             <RevealOnScroll>
               <Button
                 variant="ghost"
