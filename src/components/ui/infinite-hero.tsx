@@ -71,13 +71,13 @@ function Dropdown({ options, value, onChange, isOpen, onToggle, onClose }: Dropd
           style={{ animation: 'fadeIn 0.2s ease-out' }} />
 
           <div
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90vw] max-w-2xl bg-background border border-border rounded-2xl shadow-2xl p-6"
+          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90vw] max-w-2xl max-h-[80vh] bg-background border border-border rounded-2xl shadow-2xl p-4 sm:p-6 flex flex-col"
           style={{
             animation: 'popupIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
           }}>
 
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-lg font-medium text-foreground">Selecione uma opção</h3>
+            <div className="flex items-center justify-between mb-4 sm:mb-6 shrink-0">
+              <h3 className="text-base sm:text-lg font-medium text-foreground">Selecione uma opção</h3>
               <button
               onClick={onClose}
               className="p-2 hover:bg-muted rounded-full transition-all duration-200 hover:scale-110 hover:rotate-90 active:scale-95">
@@ -85,26 +85,28 @@ function Dropdown({ options, value, onChange, isOpen, onToggle, onClose }: Dropd
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {options.map((option, index) =>
-            <button
-              key={option.value}
-              onClick={() => {
-                onChange(option.value);
-                onClose();
-              }}
-              className={`text-left px-4 py-3 text-sm rounded-lg border transition-all duration-200 hover:scale-[1.03] hover:shadow-md active:scale-[0.97] ${
-              value === option.value ?
-              'bg-foreground text-background border-foreground font-medium shadow-lg' :
-              'border-border hover:border-foreground/50 hover:bg-muted'}`
-              }
-              style={{
-                animation: `slideUp 0.3s ease-out ${index * 0.03}s both`
-              }}>
+            <div className="overflow-y-auto overscroll-contain -mx-1 px-1">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+                {options.map((option, index) =>
+              <button
+                key={option.value}
+                onClick={() => {
+                  onChange(option.value);
+                  onClose();
+                }}
+                className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm rounded-lg border transition-all duration-200 hover:scale-[1.03] hover:shadow-md active:scale-[0.97] ${
+                value === option.value ?
+                'bg-foreground text-background border-foreground font-medium shadow-lg' :
+                'border-border hover:border-foreground/50 hover:bg-muted'}`
+                }
+                style={{
+                  animation: `slideUp 0.3s ease-out ${index * 0.03}s both`
+                }}>
 
-                  {option.label}
-                </button>
-            )}
+                    {option.label}
+                  </button>
+              )}
+              </div>
             </div>
           </div>
         </>
