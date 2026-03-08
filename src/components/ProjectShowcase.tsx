@@ -113,13 +113,6 @@ const ProjectShowcase = () => {
                       {featuredProject.description}
                     </p>
                   </div>
-                  <motion.div
-                    className="p-3 rounded-full border border-white/30 group-hover:bg-white group-hover:border-white transition-all duration-300"
-                    whileHover={{ scale: 1.15, rotate: 45 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                  >
-                    <ArrowUpRight className="h-5 w-5 text-white group-hover:text-black transition-colors" />
-                  </motion.div>
                 </div>
               </div>
             </div>
