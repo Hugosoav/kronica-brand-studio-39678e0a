@@ -259,7 +259,7 @@ export default function InfiniteHero({
           <div ref={ctaRef} className="mt-2 sm:mt-4 flex flex-col items-center gap-6 w-full max-w-3xl">
             {/* Search Bar with Dropdowns */}
             <div
-              onClick={handleNavigate}
+              onClick={handleBarClick}
               className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 backdrop-blur-md rounded-full cursor-pointer transition-colors flex-wrap justify-center ${
               isDark ?
               "bg-white/10 hover:bg-white/20 border border-white/10" :
