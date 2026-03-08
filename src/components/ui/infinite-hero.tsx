@@ -3,6 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { ChevronDown, X } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
