@@ -39,17 +39,6 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
                     {project.title}
                   </h3>
                 </div>
-                <motion.div
-                  className="p-2 rounded-full border border-white/20"
-                  initial={{ opacity: 0, x: 10 }}
-                  whileHover={{ scale: 1.1 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3 }}
-                  style={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                >
-                  <ArrowUpRight className="h-4 w-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
               </div>
 
               {/* Tags */}
