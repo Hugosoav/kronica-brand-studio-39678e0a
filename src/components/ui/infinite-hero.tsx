@@ -235,7 +235,7 @@ export default function InfiniteHero({
         <div className="flex flex-col items-center gap-4 sm:gap-6">
           <h1
             ref={h1Ref}
-            className="font-display tracking-[-0.02em] text-[clamp(3rem,13vw,8rem)] py-2 font-extralight lg:whitespace-nowrap"
+            className="font-display tracking-[-0.02em] text-[clamp(3rem,13vw,8rem)] py-2 font-extralight"
             style={{
               backgroundImage: isDark ?
               "linear-gradient(90deg, #ffffff 0%, #ffffff 35%, #888888 50%, #ffffff 65%, #ffffff 100%)" :
@@ -250,10 +250,7 @@ export default function InfiniteHero({
 
             {title.includes(" ") ? (
               <>
-                <span className="inline lg:hidden">
-                  {title.split(" ")[0]}<br />{title.split(" ").slice(1).join(" ")}
-                </span>
-                <span className="hidden lg:inline">{title}</span>
+                {title.split(" ")[0]}<br />{title.split(" ").slice(1).join(" ")}
               </>
             ) : title}
           </h1>
