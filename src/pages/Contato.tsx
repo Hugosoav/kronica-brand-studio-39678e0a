@@ -3,8 +3,24 @@ import { ArrowUpRight } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import AnimatedText from "@/components/AnimatedText";
+import { useSearchParams } from "react-router-dom";
 
 const Contato = () => {
+  const [searchParams] = useSearchParams();
+  const selectedService = searchParams.get("service") || "";
+  const selectedIndustry = searchParams.get("industry") || "";
+
+  const hasContext = selectedService || selectedIndustry;
+  const contextMessage = hasContext
+    ? `Olá! Tenho interesse em ${selectedService || "seus serviços"}${selectedIndustry ? ` para o setor de ${selectedIndustry}` : ""}. Gostaria de saber mais.`
+    : "";
+  const whatsappMessage = hasContext
+    ? encodeURIComponent(contextMessage)
+    : "";
+  const mailSubject = hasContext
+    ? encodeURIComponent(`Interesse em ${selectedService || "serviços"}${selectedIndustry ? ` — ${selectedIndustry}` : ""}`)
+    : "";
+  const mailBody = hasContext ? encodeURIComponent(contextMessage) : "";
   return (
     <PageTransition>
       <div className="min-h-screen flex flex-col relative">
