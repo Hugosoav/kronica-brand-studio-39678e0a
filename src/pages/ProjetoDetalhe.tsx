@@ -98,7 +98,7 @@ const ProjetoDetalhe = () => {
 
         {/* Project Info */}
         <section className="pb-16">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto">
             <div className="grid md:grid-cols-3 gap-12">
               <div className="md:col-span-2">
                 <RevealOnScroll>
