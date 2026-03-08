@@ -231,7 +231,7 @@ export default function InfiniteHero({
       {/* Video background */}
       <ShaderHeroBackground />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 text-center">
+      <div className="relative z-10 w-full px-7 md:px-9 text-center">
         <div className="flex flex-col items-center gap-4 sm:gap-6">
           <h1
             ref={h1Ref}
