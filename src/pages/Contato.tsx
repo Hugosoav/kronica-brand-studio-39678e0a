@@ -3,8 +3,24 @@ import { ArrowUpRight } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import AnimatedText from "@/components/AnimatedText";
+import { useSearchParams } from "react-router-dom";
 
 const Contato = () => {
+  const [searchParams] = useSearchParams();
+  const selectedService = searchParams.get("service") || "";
+  const selectedIndustry = searchParams.get("industry") || "";
+
+  const hasContext = selectedService || selectedIndustry;
+  const contextMessage = hasContext
+    ? `Olá! Tenho interesse em ${selectedService || "seus serviços"}${selectedIndustry ? ` para o setor de ${selectedIndustry}` : ""}. Gostaria de saber mais.`
+    : "";
+  const whatsappMessage = hasContext
+    ? encodeURIComponent(contextMessage)
+    : "";
+  const mailSubject = hasContext
+    ? encodeURIComponent(`Interesse em ${selectedService || "serviços"}${selectedIndustry ? ` — ${selectedIndustry}` : ""}`)
+    : "";
+  const mailBody = hasContext ? encodeURIComponent(contextMessage) : "";
   return (
     <PageTransition>
       <div className="min-h-screen flex flex-col relative">
@@ -38,9 +54,23 @@ const Contato = () => {
                     {"Vamos\ncriar algo\nextraordinário"}
                   </AnimatedText>
 
+                  {hasContext && (
+                    <RevealOnScroll delay={0.2}>
+                      <div className="mb-10 p-4 rounded-xl border border-border bg-muted/30">
+                        <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2 block">
+                          Seu interesse
+                        </span>
+                        <p className="text-sm text-foreground">
+                          {selectedService && <span className="inline-block px-3 py-1 mr-2 mb-1 rounded-full border border-border bg-background text-xs font-medium">{selectedService}</span>}
+                          {selectedIndustry && <span className="inline-block px-3 py-1 mr-2 mb-1 rounded-full border border-border bg-background text-xs font-medium">{selectedIndustry}</span>}
+                        </p>
+                      </div>
+                    </RevealOnScroll>
+                  )}
+
                   <div className="space-y-10">
                     <RevealOnScroll delay={0.3}>
-                      <a href="mailto:kronicastudio@gmail.com" className="group block">
+                      <a href={`mailto:kronicastudio@gmail.com${mailSubject ? `?subject=${mailSubject}&body=${mailBody}` : ""}`} className="group block">
                         <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2 block">
                           Email
                         </span>
@@ -53,7 +83,7 @@ const Contato = () => {
 
                     <RevealOnScroll delay={0.4}>
                       <a
-                        href="https://wa.me/5528999161275"
+                        href={`https://wa.me/5528999161275${whatsappMessage ? `?text=${whatsappMessage}` : ""}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group block"

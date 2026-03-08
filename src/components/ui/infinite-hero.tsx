@@ -135,7 +135,12 @@ export default function InfiniteHero({
     if (selectedService) params.set("service", selectedService);
     if (selectedIndustry) params.set("industry", selectedIndustry);
     const query = params.toString();
-    navigate(`/projetos${query ? `?${query}` : ""}`);
+    // If user selected a service or industry, go to contact page; otherwise go to projects
+    if (selectedService || selectedIndustry) {
+      navigate(`/contato${query ? `?${query}` : ""}`);
+    } else {
+      navigate("/projetos");
+    }
   };
 
 
