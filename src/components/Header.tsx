@@ -97,20 +97,22 @@ const Header = () => {
       <div className="w-full px-7 md:px-9 py-5">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <MagneticButton strength={0.15}>
-            <Link to="/" className="flex items-center">
-              <motion.img
-                src={logoBranco}
-                alt="Kronica"
-                className="h-5 md:h-6"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              />
-            </Link>
-          </MagneticButton>
+          <div className="flex-1">
+            <MagneticButton strength={0.15}>
+              <Link to="/" className="flex items-center w-fit">
+                <motion.img
+                  src={logoBranco}
+                  alt="Kronica"
+                  className="h-5 md:h-6"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                />
+              </Link>
+            </MagneticButton>
+          </div>
 
-          {/* Desktop Navigation + Search */}
-          <div className="hidden md:flex items-center gap-8" ref={searchContainerRef} data-search-container>
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center justify-center">
             <AnimatePresence mode="wait">
               {!searchOpen && (
                 <motion.div
@@ -151,6 +153,10 @@ const Header = () => {
                 </motion.div>
               )}
             </AnimatePresence>
+          </div>
+
+          {/* Search - Right */}
+          <div className="hidden md:flex flex-1 items-center justify-end" ref={searchContainerRef} data-search-container>
             <AnimatePresence mode="wait">
               {searchOpen ? (
                 <motion.div
