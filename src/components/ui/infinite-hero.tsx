@@ -130,14 +130,37 @@ export default function InfiniteHero({
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
-  const handleNavigate = () => {
+  const navigateToContact = (service: string, industry: string) => {
     const params = new URLSearchParams();
-    if (selectedService) params.set("service", selectedService);
-    if (selectedIndustry) params.set("industry", selectedIndustry);
+    if (service) params.set("service", service);
+    if (industry) params.set("industry", industry);
     const query = params.toString();
-    // If user selected a service or industry, go to contact page; otherwise go to projects
+    navigate(`/contato${query ? `?${query}` : ""}`);
+  };
+
+  const handleServiceChange = (value: string) => {
+    setSelectedService(value);
+    if (value && selectedIndustry) {
+      navigateToContact(value, selectedIndustry);
+    } else if (value && !selectedIndustry) {
+      setServiceOpen(false);
+      setIndustryOpen(true);
+    }
+  };
+
+  const handleIndustryChange = (value: string) => {
+    setSelectedIndustry(value);
+    if (value && selectedService) {
+      navigateToContact(selectedService, value);
+    } else if (value && !selectedService) {
+      setIndustryOpen(false);
+      setServiceOpen(true);
+    }
+  };
+
+  const handleBarClick = () => {
     if (selectedService || selectedIndustry) {
-      navigate(`/contato${query ? `?${query}` : ""}`);
+      navigateToContact(selectedService, selectedIndustry);
     } else {
       navigate("/projetos");
     }
@@ -236,7 +259,7 @@ export default function InfiniteHero({
           <div ref={ctaRef} className="mt-2 sm:mt-4 flex flex-col items-center gap-6 w-full max-w-3xl">
             {/* Search Bar with Dropdowns */}
             <div
-              onClick={handleNavigate}
+              onClick={handleBarClick}
               className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 backdrop-blur-md rounded-full cursor-pointer transition-colors flex-wrap justify-center ${
               isDark ?
               "bg-white/10 hover:bg-white/20 border border-white/10" :
@@ -248,7 +271,7 @@ export default function InfiniteHero({
                 <Dropdown
                   options={serviceOptions}
                   value={selectedService}
-                  onChange={setSelectedService}
+                  onChange={handleServiceChange}
                   isOpen={serviceOpen}
                   onToggle={() => {
                     setServiceOpen(!serviceOpen);
@@ -262,7 +285,7 @@ export default function InfiniteHero({
                 <Dropdown
                   options={industryOptions}
                   value={selectedIndustry}
-                  onChange={setSelectedIndustry}
+                  onChange={handleIndustryChange}
                   isOpen={industryOpen}
                   onToggle={() => {
                     setIndustryOpen(!industryOpen);
