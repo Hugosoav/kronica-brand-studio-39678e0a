@@ -109,8 +109,8 @@ const Header = () => {
             </Link>
           </MagneticButton>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-12">
+          {/* Desktop Navigation + Search */}
+          <div className="hidden md:flex items-center gap-8" ref={searchContainerRef} data-search-container>
             <AnimatePresence mode="wait">
               {!searchOpen && (
                 <motion.div
@@ -151,10 +151,6 @@ const Header = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-
-          {/* Search area */}
-          <div className="hidden md:flex items-center" ref={searchContainerRef} data-search-container>
             <AnimatePresence mode="wait">
               {searchOpen ? (
                 <motion.div
