@@ -271,7 +271,7 @@ export default function InfiniteHero({
                 <Dropdown
                   options={serviceOptions}
                   value={selectedService}
-                  onChange={setSelectedService}
+                  onChange={handleServiceChange}
                   isOpen={serviceOpen}
                   onToggle={() => {
                     setServiceOpen(!serviceOpen);
