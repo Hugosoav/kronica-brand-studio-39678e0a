@@ -3,6 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { ChevronDown, X } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
@@ -63,54 +64,53 @@ function Dropdown({ options, value, onChange, isOpen, onToggle, onClose }: Dropd
         <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       
-      {isOpen &&
-      <>
+      {isOpen && createPortal(
+        <>
           <div
-          className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm"
-          onClick={onClose}
-          style={{ animation: 'fadeIn 0.2s ease-out' }} />
+            className="fixed inset-0 z-[9998] bg-background/80 backdrop-blur-sm"
+            onClick={onClose}
+            style={{ animation: 'fadeIn 0.2s ease-out' }} />
 
           <div
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90vw] max-w-2xl max-h-[80vh] bg-background border border-border rounded-2xl shadow-2xl p-4 sm:p-6 flex flex-col"
-          style={{
-            animation: 'popupIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
-          }}>
+            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[9999] w-[90vw] max-w-2xl max-h-[80vh] bg-background border border-border rounded-2xl shadow-2xl p-4 sm:p-6 flex flex-col"
+            style={{
+              animation: 'popupIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
+            }}>
 
             <div className="flex items-center justify-between mb-4 sm:mb-6 shrink-0">
               <h3 className="text-base sm:text-lg font-medium text-foreground">Selecione uma opção</h3>
               <button
-              onClick={onClose}
-              className="p-2 hover:bg-muted rounded-full transition-all duration-200 hover:scale-110 hover:rotate-90 active:scale-95">
-
+                onClick={onClose}
+                className="p-2 hover:bg-muted rounded-full transition-all duration-200 hover:scale-110 hover:rotate-90 active:scale-95">
                 <X className="h-5 w-5" />
               </button>
             </div>
             <div className="overflow-y-auto overscroll-contain -mx-1 px-1">
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
                 {options.map((option, index) =>
-              <button
-                key={option.value}
-                onClick={() => {
-                  onChange(option.value);
-                  onClose();
-                }}
-                className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm rounded-lg border transition-all duration-200 hover:scale-[1.03] hover:shadow-md active:scale-[0.97] ${
-                value === option.value ?
-                'bg-foreground text-background border-foreground font-medium shadow-lg' :
-                'border-border hover:border-foreground/50 hover:bg-muted'}`
-                }
-                style={{
-                  animation: `slideUp 0.3s ease-out ${index * 0.03}s both`
-                }}>
-
+                  <button
+                    key={option.value}
+                    onClick={() => {
+                      onChange(option.value);
+                      onClose();
+                    }}
+                    className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm rounded-lg border transition-all duration-200 hover:scale-[1.03] hover:shadow-md active:scale-[0.97] ${
+                      value === option.value ?
+                      'bg-foreground text-background border-foreground font-medium shadow-lg' :
+                      'border-border hover:border-foreground/50 hover:bg-muted'}`
+                    }
+                    style={{
+                      animation: `slideUp 0.3s ease-out ${index * 0.03}s both`
+                    }}>
                     {option.label}
                   </button>
-              )}
+                )}
               </div>
             </div>
           </div>
-        </>
-      }
+        </>,
+        document.body
+      )}
     </div>);
 
 }
