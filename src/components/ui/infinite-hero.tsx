@@ -250,10 +250,7 @@ export default function InfiniteHero({
 
             {title.includes(" ") ? (
               <>
-                <span className="inline lg:hidden">
-                  {title.split(" ")[0]}<br />{title.split(" ").slice(1).join(" ")}
-                </span>
-                <span className="hidden lg:inline">{title}</span>
+                {title.split(" ")[0]}<br />{title.split(" ").slice(1).join(" ")}
               </>
             ) : title}
           </h1>
