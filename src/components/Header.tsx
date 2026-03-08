@@ -110,7 +110,7 @@ const Header = () => {
           </MagneticButton>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-12">
             <AnimatePresence mode="wait">
               {!searchOpen && (
                 <motion.div
