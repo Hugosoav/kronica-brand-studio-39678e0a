@@ -264,7 +264,7 @@ const ProjetoDetalhe = () => {
 
         {/* Tags */}
         <section className="pb-16">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto">
             <RevealOnScroll>
               <div className="flex flex-wrap gap-3">
                 {project.tags.map((tag, index) =>
