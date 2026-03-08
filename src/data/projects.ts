@@ -50,18 +50,18 @@ export const projects: Project[] = [
     category: "Rebranding",
     description: "Rebranding completo para pousada ecológica em Iriri, conectando natureza, conforto e identidade regional.",
     fullDescription: "Desenvolvemos o rebranding da Pousada Da Mata, uma pousada ecológica localizada em Iriri/ES. O projeto revitalizou a identidade visual da marca, traduzindo a essência do refúgio na natureza em uma linguagem visual contemporânea e acolhedora.",
-    concept: "O conceito celebra a fauna e flora local, com o mico-leão como protagonista — símbolo de conexão com a mata. O arco solar e as folhas reforçam a ideia de amanhecer, renovação e vida. A paleta em tons terrosos (marrom, dourado e verde) transmite calor, acolhimento e pertencimento à natureza. A tipografia arredondada e acessível reflete a hospitalidade da pousada.",
+    concept: "O conceito celebra a fauna e flora local, com o mico-leão como protagonista, símbolo de conexão com a mata. O arco solar e as folhas reforçam a ideia de amanhecer, renovação e vida. A paleta em tons terrosos (marrom, dourado e verde) transmite calor, acolhimento e pertencimento à natureza. A tipografia arredondada e acessível reflete a hospitalidade da pousada.",
     year: "2026",
     client: "Pousada Da Mata",
     services: ["Rebranding", "Design de Logo", "Identidade Visual", "Social Media", "Papelaria", "Aplicações"],
     images: {
-      cover: pousadaCover,
-      gallery: [pousada09, pousada02, pousada01, pousada04, pousada05, pousada06, pousada07, pousada08, pousada03]
+      cover: pousada01,
+      gallery: [pousada09, pousada02, pousadaCover, pousada04, pousada05, pousada06, pousada07, pousada08, pousada03]
     },
     tags: ["Hotelaria", "Natureza", "Rebranding", "Ecológico"],
     brandStory: {
       history: "Acreditamos que viajar é mais do que mudar de lugar, é mudar o ritmo, o olhar e a energia. A Pousada da Mata nasceu para ser refúgio: um espaço onde a natureza não é apenas cenário, mas presença viva, onde o silêncio traz paz e cada detalhe convida você a respirar mais fundo. Entre o verde da mata e o azul do céu, criamos um lugar onde o simples se torna especial e o conforto abraça. Porque descansar é essencial e viver momentos memoráveis importa.",
-      voiceTone: "O tom de voz é acolhedor, sensorial e sereno. A comunicação evoca sensações — o som das folhas, o cheiro da mata, o calor do sol. O discurso é convidativo e intimista, como um convite sussurrado para desacelerar e se reconectar.",
+      voiceTone: "O tom de voz é acolhedor, sensorial e sereno. A comunicação evoca sensações: o som das folhas, o cheiro da mata, o calor do sol. O discurso é convidativo e intimista, como um convite sussurrado para desacelerar e se reconectar.",
       values: ["Reconexão", "Natureza", "Acolhimento", "Simplicidade", "Descanso"]
     }
   },
