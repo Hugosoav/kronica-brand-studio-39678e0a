@@ -98,7 +98,6 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-1">
-            <MagneticButton strength={0.15}>
               <Link to="/" className="flex items-center w-fit">
                 <motion.img
                   src={logoBranco}
