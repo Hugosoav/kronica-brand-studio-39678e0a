@@ -42,8 +42,39 @@ import pousada07 from "@/assets/projects/pousada-da-mata/pousada-da-mata-07.jpg"
 import pousada08 from "@/assets/projects/pousada-da-mata/pousada-da-mata-08.jpg";
 import pousada09 from "@/assets/projects/pousada-da-mata/pousada-da-mata-09.jpg";
 
+import vn01 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-01.jpg";
+import vn02 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-02.jpg";
+import vn03 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-03.jpg";
+import vn04 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-04.jpg";
+import vn05 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-05.jpg";
+import vn06 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-06.jpg";
+import vn07 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-07.jpg";
+import vn08 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-08.jpg";
+import vn09 from "@/assets/projects/vasconcelos-nogueira/vasconcelos-nogueira-09.jpg";
+
 
 export const projects: Project[] = [
+  {
+    id: "vasconcelos-nogueira",
+    title: "Vasconcelos & Nogueira",
+    category: "Identidade Visual",
+    description: "Identidade visual sóbria e atemporal para a sociedade de advogados Vasconcelos & Nogueira, em fase de expansão.",
+    fullDescription: "Desenvolvemos a identidade visual completa para Vasconcelos & Nogueira Advogados Associados, uma dupla de advogados em processo de expansão. O projeto traduz a solidez do Direito em uma marca elegante, autoritária e contemporânea, preparada para crescer junto com o escritório.",
+    concept: "O conceito é construído sobre o símbolo da coluna clássica, ícone universal de justiça, estabilidade e tradição. As iniciais V e N são integradas ao desenho da coluna, formando um monograma único que une herança e identidade. A paleta em azul-petróleo profundo e dourado transmite confiança, sofisticação e prestígio. A tipografia serifada reforça a autoridade e o caráter institucional da marca.",
+    year: "2026",
+    client: "Vasconcelos & Nogueira Advogados Associados",
+    services: ["Identidade Visual", "Design de Logo", "Monograma", "Papelaria", "Aplicações", "Mockups"],
+    images: {
+      cover: vn02,
+      gallery: [vn02, vn01, vn03, vn05, vn07, vn04, vn09, vn06, vn08]
+    },
+    tags: ["Advocacia", "Jurídico", "Identidade Visual", "Expansão"],
+    brandStory: {
+      history: "Vasconcelos & Nogueira nasce da união de dois advogados que compartilham a mesma visão: o Direito como instrumento de proteção, estratégia e construção de relações duradouras. Após anos atuando individualmente, decidiram unir forças para fundar uma sociedade própria, agora em fase de expansão para atender uma carteira crescente de clientes. A nova identidade marca esse momento de amadurecimento, traduzindo em símbolo a solidez do trabalho conjunto e a ambição de crescer com excelência.",
+      voiceTone: "O tom de voz é institucional, preciso e confiável. A comunicação privilegia a clareza técnica sem abrir mão da elegância, refletindo a postura de um escritório que se posiciona como parceiro estratégico de seus clientes. O discurso transmite autoridade e maturidade, sempre com respeito e proximidade.",
+      values: ["Solidez", "Tradição", "Excelência", "Confiança", "Estratégia"]
+    }
+  },
   {
     id: "pousada-da-mata",
     title: "Pousada Da Mata",
