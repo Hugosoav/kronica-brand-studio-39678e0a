@@ -65,7 +65,7 @@ export const projects: Project[] = [
     client: "Vasconcelos & Nogueira Advogados Associados",
     services: ["Identidade Visual", "Design de Logo", "Monograma", "Papelaria", "Aplicações", "Mockups"],
     images: {
-      cover: vn02,
+      cover: vn04,
       gallery: [vn02, vn01, vn03, vn05, vn07, vn04, vn09, vn06, vn08]
     },
     tags: ["Advocacia", "Jurídico", "Identidade Visual", "Expansão"],
